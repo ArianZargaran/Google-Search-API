@@ -13,8 +13,12 @@ export default class searchBar extends Component {
     term,
   } = this.state;
 
+  const {
+      onSearchSumbmit = () => { },
+    } = this.props;
 
     return (
+    <form>  
       <input
         type="text" 
         value={term} 
@@ -23,6 +27,8 @@ export default class searchBar extends Component {
         placeholder="Search..." 
         autoFocus
       />
+      <input onSubmit={(event) => { onSearchSumbmit(this.state.term) }} className="gse-search-engine-submit" type='submit' value=' ' />
+    </form>
   );}
 
   onInputChange(term) {

@@ -15,5 +15,3 @@ const searchResult = ({children}) => {
 }
 
 export default searchResult;
-
-// <p className='search-result-emotion'>{children.emotion}</p>

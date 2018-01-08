@@ -7,7 +7,7 @@ import ResultsSection from './results-section';
 import '../styles/Reset.css';
 import '../styles/App.css';
 
-// {
+// Google {
 //   key: 'AIzaSyBoM7lQN2DV1usGgQAe_3-oQqOSyLr-elY',
 //   cx: 'partner-pub-4220993729315201:86cwp1-wke2'
 // }
@@ -81,20 +81,15 @@ export default class App extends Component {
       },
     ]}
 
-    this.query = "";
   }
 
   render(){
-
-  return (
-    <div>
-      <Header>Gemma SerchEnyín</Header>
-      <SearcEngine />
-      <ResultsSection result={this.state}/>
-    </div>
+    return (
+      <div>
+        <Header>Gemma SerchEnyín</Header>
+        <SearcEngine onSearchSumbmit={(query)=> console.log(query)}/>
+        <ResultsSection result={this.state}/>
+      </div>
   );}
 
-  onInputChange(){
-
-  }
 }
