@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import SearchEngineMicro from './search-engine-micro';
 
+import '../styles/search-engine-form.css';
 
-export default class searchBar extends Component {
+export default class searchForm extends Component {
   constructor(props) {
     super(props);
 
@@ -14,25 +16,26 @@ export default class searchBar extends Component {
   } = this.state;
 
   const {
-      onSearchSumbmit = () => { },
+      onSearchSubmit = () => { },
     } = this.props;
 
     return (
-    <form>  
+      <form action="#" className="gse-search-engine_form">  
       <input
         type="text" 
-        value={term} 
+        value={term}
+        onChange={(event) => { this.onInputChange(event.target.value)}}
         className="gse-search-engine_field"
-        onChange={event => this.onInputChange(event.target.value)} 
         placeholder="Search..." 
         autoFocus
       />
-      <input onSubmit={(event) => { onSearchSumbmit(this.state.term) }} className="gse-search-engine-submit" type='submit' value=' ' />
+      <SearchEngineMicro />
+      <input onClick={() => {onSearchSubmit(term)}} className="gse-search-engine-submit" type='submit' value=' ' />
     </form>
   );}
 
-  onInputChange(term) {
-    this.setState({term});
-    this.props.onSearchTermChange(term);
+  onInputChange(query) {
+    this.setState({
+      term: query});
   }
 }

@@ -7,7 +7,7 @@
 
 .gse-search-engine {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   width: 350px;
   height: 44px;
   text-align: center;
@@ -32,36 +32,3 @@
 
 
 
-.gse-search-engine .gse-search-engine_field {
-  border: none;
-  height: 90%;
-  width: 100%;
-  padding-left: 20px;
- }
-.gse-search-engine .gse-search-engine_field:focus {
-  outline: 0; }
-  @media screen and (min-width: 695.01px) {
-    .gse-search-engine .gse-search-engine_field {
-      width: 429px; } }
-  @media screen and (min-width: 864.01px) {
-    .gse-search-engine .gse-search-engine_field {
-      width: 85%; } }
-
-
-.gse-search-engine-submit {
-  padding-top: 8px;
-  display: block;
-  min-width: 50px;
-  background: url('http://evene.lefigaro.fr/sites/all/themes/evene/scope/images/magnifier.svg') no-repeat;
-  background-size: 30px 30px;
-  background-position: center;
-  border: none;
-  border-right:2px solid transparent;
-  outline: none;
-  cursor: pointer;
-}
-
-.gse-search-engine-submit:active {
-  border-right:2px solid tomato;
-  background-size: 28px 28px;
-  }
