@@ -6,10 +6,10 @@ const searchResult = ({children}) => {
 
   return (
     <li className='search-result'>
-      <h1 className='search-result-title'>{children.title}</h1>
-      <a className='search-result-url'>{children.url}</a>
-      <p className='search-result-description'>{children.description}</p>
-      <p className='search-result-emotion'>{children.emotion}</p>
+      <h1 className='search-result_title'>{children.title}</h1>
+      <a className='search-result_url'>{children.url}</a>
+      <p className='search-result_description'>{children.description}</p>
+      <p className='search-result_emotion'>{children.emotion}</p>
     </li>
   );
 }

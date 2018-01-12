@@ -9,27 +9,28 @@
     .search-result {
       width: 666px; } }
 
-.search-result-title {
+.search-result_title {
   color: #1a0dab;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 }
 
-.search-result-url {
+.search-result_url {
   color: #006621;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
 
-.search-result-description {
+.search-result_description {
   color: #545454;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
 }
 
-.search-result-emotion {
+.search-result_emotion {
+  padding: 5px 0;
   font-size:15px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchEngineForm from './search-engine-form';
+import SearchEngineForm from './search-engine_form';
 import '../styles/search-engine.css';
 
 export default class searchEngine extends Component {
@@ -17,7 +17,7 @@ export default class searchEngine extends Component {
     } = this.props;
 
     return (
-    <div className='gse-search-engine-wrapper'>  
+    <div className='gse-search-engine_wrapper'>  
       <div className="gse-search-engine">  
           <SearchEngineForm onSearchSubmit={(term) => { onSchSubmit(term)}}/ >
       </div>

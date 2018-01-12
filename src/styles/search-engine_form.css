@@ -22,7 +22,7 @@
       width: 85%; } }
 
 
-.gse-search-engine-submit {
+.gse-search-engine_submit {
   height: 100%;
   padding-top: 8px;
   display: block;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.gse-search-engine-submit:active {
+.gse-search-engine_submit:active {
   border-right:2px solid tomato;
   background-size: 28px 28px;
   }
