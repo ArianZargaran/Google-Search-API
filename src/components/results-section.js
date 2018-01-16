@@ -6,9 +6,9 @@ import '../styles/results-section.css';
 const ResultsSection = ({result}) => {
     return (
       <section className="gse-results-section">
-        <ol>
+        <ul>
           {{result}.result.result.map((res, idx) => (<SearchResult key={idx}>{res}</ SearchResult>))}
-        </ol>
+        </ul>
       </section>
   );
 }
