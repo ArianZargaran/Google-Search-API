@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Header from './main-header';
 import SearcEngine from './search-engine';
