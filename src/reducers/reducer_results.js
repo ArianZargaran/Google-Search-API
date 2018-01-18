@@ -1,5 +1,4 @@
-
-export default () => {
+export default function() {
   return [
     {
       title: "This is a title",
