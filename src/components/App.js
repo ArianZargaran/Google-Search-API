@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Header from './main-header';
+import Header from '../containers/main-header';
 import SearcEngine from './search-engine';
 import ResultsSection from '../containers/results-section';
 
@@ -13,8 +13,12 @@ export default class App extends Component {
     return (
       <div>
         <Header>Gemma SerchEnyín</Header>
-        <SearcEngine onSchSubmit={(query) => this.eventSubmit(query)}/>
-        <ResultsSection result={this.state}/>
+        <SearcEngine 
+          onSchSubmit={ (query) => this.eventSubmit(query) }
+        />
+        <ResultsSection 
+          result={this.state}
+        />
       </div>
   );}
 

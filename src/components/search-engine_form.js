@@ -7,7 +7,9 @@ export default class searchForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {term: ''};
+    this.state = {
+      term: ''
+    };
   }
 
   render(){
@@ -21,21 +23,27 @@ export default class searchForm extends Component {
 
     return (
       <form action="#" className="gse-search-engine_form">  
-      <input
-        type="text" 
-        value={term}
-        onChange={(event) => {this.onInputChange(event.target.value)}}
-        className="gse-search-engine_field"
-        placeholder="Search..." 
-        autoFocus
-      />
-      <SearchEngineMicro />
-      <input onClick={() => {onSearchSubmit(term)}} className="gse-search-engine_submit" type='submit' value=' ' />
-    </form>
+        <input
+          type="text" 
+          value={term}
+          onChange={ (event) => this.onInputChange(event.target.value) } 
+          className="gse-search-engine_field"
+          placeholder="Search..." 
+          autoFocus
+        />
+        <SearchEngineMicro />
+        <input 
+          onClick={ () => onSearchSubmit(term) } 
+          className="gse-search-engine_submit" 
+          type='submit' 
+          value=' ' 
+        />
+      </form>
   );}
 
   onInputChange(query) {
     this.setState({
-      term: query});
+      term: query
+    });
   }
 }
