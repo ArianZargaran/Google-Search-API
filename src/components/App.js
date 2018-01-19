@@ -13,16 +13,11 @@ export default class App extends Component {
     return (
       <div>
         <Header>Gemma SerchEnyín</Header>
-        <SearcEngine 
-          onSchSubmit={ (query) => this.eventSubmit(query) }
-        />
+        <SearcEngine />
         <ResultsSection 
           result={this.state}
         />
       </div>
-  );}
-
-  eventSubmit(query) {
-    console.log(query);
-  }
-}
+    );
+  };
+};

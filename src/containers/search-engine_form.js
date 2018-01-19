@@ -1,9 +1,14 @@
-import React, {Component} from 'react';
-import SearchEngineMicro from './search-engine_micro';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { searchQuery } from '../actions/index';
+import { bindActionCreators } from 'redux';
+
+
+import SearchEngineMicro from '../components/search-engine_micro';
 
 import '../styles/search-engine_form.css';
 
-export default class searchForm extends Component {
+class SearchForm extends Component {
   constructor(props) {
     super(props);
 
@@ -17,10 +22,6 @@ export default class searchForm extends Component {
     term,
   } = this.state;
 
-  const {
-      onSearchSubmit = () => { },
-    } = this.props;
-
     return (
       <form action="#" className="gse-search-engine_form">  
         <input
@@ -33,7 +34,7 @@ export default class searchForm extends Component {
         />
         <SearchEngineMicro />
         <input 
-          onClick={ () => onSearchSubmit(term) } 
+          onClick={() => this.props.searchQuery(this.state.term) } 
           className="gse-search-engine_submit" 
           type='submit' 
           value=' ' 
@@ -41,9 +42,21 @@ export default class searchForm extends Component {
       </form>
   );}
 
-  onInputChange(query) {
+  onInputChange(term) {
     this.setState({
-      term: query
+      term: term
     });
   }
 }
+
+function mapStateToProps(state){
+  return {
+    query: state.query
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ searchQuery: searchQuery }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+
 import SearchResult from "../components/search-result";
 
 import "../styles/results-section.css";
@@ -28,5 +29,7 @@ function mapStateToProps(state) {
     results: state.results
   };
 }
+
+
 
 export default connect(mapStateToProps)(ResultsSection);
