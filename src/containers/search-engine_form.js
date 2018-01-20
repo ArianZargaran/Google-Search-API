@@ -22,8 +22,12 @@ class SearchForm extends Component {
     term,
   } = this.state;
 
+  const {
+    searchQuery = ()=>{}
+  } = this.props
+
     return (
-      <form action="#" className="gse-search-engine_form">  
+      <form onSubmit={(event) => { searchQuery(this.state.term); event.preventDefault()} } action="#" className="gse-search-engine_form">  
         <input
           type="text" 
           value={term}
@@ -33,8 +37,7 @@ class SearchForm extends Component {
           autoFocus
         />
         <SearchEngineMicro />
-        <input 
-          onClick={() => this.props.searchQuery(this.state.term) } 
+        <input  
           className="gse-search-engine_submit" 
           type='submit' 
           value=' ' 

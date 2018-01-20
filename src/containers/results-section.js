@@ -10,6 +10,12 @@ class ResultsSection extends Component {
   renderList() {
     const { results = {} } = this.props;
 
+    if (!results) { return (
+      <h1 className='search-result'>
+        <p className='search-result_title'>Start Searching!</p>
+      </h1>
+    )}
+
     return results.map((res, idx) => (
       <SearchResult key={idx}>{res}</SearchResult>
     ));

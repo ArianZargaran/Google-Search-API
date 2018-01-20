@@ -1,3 +1,6 @@
 export function searchQuery(query){
-  console.log('The user searched:', query);
+  return {
+    type: 'SEARCH_TERM',
+    payload: query
+  }
 };
